@@ -65,6 +65,7 @@ set_touchpad_click_zone = partial( set_touchpad_int_property, propName='Button R
 set_touchpad_tap_click = partial( set_touchpad_int_property, propName='Tap Enable' )
 
 def touchpad_fixes(deviceNum):
+    set_device_active(deviceNum,True)
     set_touchpad_tap_click(deviceNum=deviceNum,val=0)
     set_touchpad_click_zone(deviceNum=deviceNum,val=1)
 
